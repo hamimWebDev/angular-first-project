@@ -1,0 +1,23 @@
+<div class="blog-container">
+  <div *ngFor="let blog of blogs" class="blog-card">
+    <h2 class="blog-title">{{ blog.title }}</h2>
+    <p class="blog-author">By {{ blog.author }} on {{ blog.publishedDate }}</p>
+    <p class="blog-content">{{ blog.content }}</p>
+    <div class="blog-tags">
+      <span *ngFor="let tag of blog.tags" class="tag">{{ tag }}</span>
+    </div>
+    <div class="blog-footer">
+      <span class="blog-likes">👍 {{ blog.likes }} Likes</span>
+      <div class="blog-comments">
+        <h4>Comments:</h4>
+        <div *ngFor="let comment of blog.comments" class="comment">
+          <p>
+            <strong>{{ comment.user }}</strong
+            >: {{ comment.comment }}
+          </p>
+          <p class="comment-date">Posted on: {{ comment.date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

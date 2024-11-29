@@ -1,0 +1,12 @@
+<div
+  *ngFor="let user of users"
+  class="user-card"
+  [ngClass]="user.isActive ? 'active-user' : 'inactive-user'"
+>
+  <h3>{{ user.name }}</h3>
+  <p>Email: {{ user.email }}</p>
+  <p>Phone: {{ user.phone }}</p>
+  <p [ngStyle]="{ color: user.isActive ? 'green' : 'red' }">
+    Status: <strong>{{ user.isActive ? "Active" : "Inactive" }}</strong>
+  </p>
+</div>

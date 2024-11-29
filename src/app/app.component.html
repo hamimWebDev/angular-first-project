@@ -9,4 +9,11 @@
 <div (click)="onDivClick()">
   <button (click)="onClick($event)">Click</button>
 </div>
+----
+<div>
+  <input [(ngModel)]="email" type="text" />
+  <button (click)="onSave()">save</button>
+  <p>{{ email }}</p>
+</div>
 <app-blog-post></app-blog-post>
+<app-user-post></app-user-post>
